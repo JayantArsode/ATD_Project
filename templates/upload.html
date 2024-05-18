@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Abdominal Trauma Report Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background: radial-gradient(circle, #333, #000);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: rgba(68, 68, 68, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-header {
+            background: linear-gradient(to right, #ff6b6b, #ffa500);
+            color: #fff;
+            font-weight: bold;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: 30px;
+            font-size: 32px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #ff6b6b, #ffa500);
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Abdominal Trauma Report Generator
+            </div>
+            <div class="card-body">
+                <form method="post" action="/generate" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="image" class="font-weight-bold">Select an image:</label>
+                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Generate Report</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
